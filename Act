@@ -1,0 +1,340 @@
+#include <iostream>
+using namespace std;
+
+int main()
+{
+	int menuchoice, adminchoice, regischoice, enrollchoice, stdchoice, stdback, deloption, ctrlchoice;
+	string user[2] = {"admin", "registrar"};
+	string pass[2] = {"admin", "registrar"};
+	string stds[5];
+	string yrname[5];
+	int yrcode[5] = {0,0,0,0,0};
+	int numun[5] = {0,0,0,0,0};
+	int tuifee[5] = {0,0,0,0,0};
+	int balance[5] = {0,0,0,0,0};
+	int downpayment[5] = {0,0,0,0,0};
+	int unitrate[5] = {0,0,0,0,0};
+	string username, password, userr, passs, reuser, repass;
+	string stud, yearcode, unnum;
+	int i, i2;
+	bool login = false;
+	do
+	{
+		cout<<"==Login Menu==\n\n";
+		cout<<"[1]Login\n";
+		cout<<"[2]Exit\n";
+		cout<<"Choice: ";
+		cin>>menuchoice;
+		system("cls");
+		
+			if(menuchoice == 1)
+			{
+				cout<<"Login\n\n";
+				cout<<"User: ";
+				cin>>username;
+				cout<<"Password: ";
+				cin>>password;
+				system("cls");
+				i = 0;
+				i2 = 1;
+				do
+				{
+					if(username == user[i] && password == pass[i])
+					{
+						login = true;
+						cout<<"Login Successfully!\n\n";
+						system("pause");
+						system("cls");
+					}
+					else
+					{
+						i++;
+					}
+				}
+				while(i != 2 && login == false);
+				
+				if(login == true && username == user[0])
+					{
+					do
+					{
+						cout<<"Hello Admin\n\n";
+						cout<<"[1]View all enrollees\n";
+						cout<<"[2]Delete Enrollees\n";
+						cout<<"[3]Edit Information\n";
+						cout<<"[4]Logout";
+						cout<<"\nChoice: ";
+						cin >>adminchoice;
+						login = false;
+						system("cls");
+						
+						if(adminchoice == 1)
+						{
+							i2=0;
+							cout<<"Enrollees\n\n";
+							cout<<"Student1" ;
+							cout<<"\nStudent2";
+							cout<<"\nStudent3";
+							cout<<"\nStudent4";
+							cout<<"\nStudent5";
+							cout<<"\nChoice: ";
+							cin>>stdchoice;
+							system("cls");
+								
+								do
+								{
+								if(stdchoice == 1)
+								{
+									cout<<"Student name: " <<stds[0];
+									cout<<"\nYear Name :" <<yrname[0];
+									cout<<"\nNumber of Units Enrolled: " <<unitrate[0];
+									cout<<"\nTuition Fee: " <<tuifee[0];
+									cout<<"\nDown Payment: " <<downpayment[0];
+									cout<<"\nBalance: " <<balance[0];
+									cout<<"\n[1]BACK[";
+									cin>>stdback;
+									system("cls");
+								}
+								
+								else if(stdchoice == 2)
+								{
+									cout<<"Student name: " <<stds[1];
+									cout<<"\nYear Name :" <<yrname[1];
+									cout<<"\nNumber of Units Enrolled: " <<unitrate[1];
+									cout<<"\nTuition Fee: " <<tuifee[1];
+									cout<<"\nDown Payment: " <<downpayment[1];
+									cout<<"\nBalance: " <<balance[1];
+									cout<<"\n[1]BACK[";
+									cin>>stdback;
+									system("cls");
+								}
+								
+								else if(stdchoice == 3)
+								{
+									cout<<"Student name: " <<stds[2];
+									cout<<"\nYear Name :" <<yrname[2];
+									cout<<"\nNumber of Units Enrolled: " <<unitrate[2];
+									cout<<"\nTuition Fee: " <<tuifee[2];
+									cout<<"\nDown Payment: " <<downpayment[2];
+									cout<<"\nBalance: " <<balance[2];
+									cout<<"\n[1]BACK[";
+									cin>>stdback;
+									system("cls");
+								}
+								else if(stdchoice == 4)
+								{
+									cout<<"Student name: " <<stds[3];
+									cout<<"\nYear Name :" <<yrname[3];
+									cout<<"\nNumber of Units Enrolled: " <<unitrate[3];
+									cout<<"\nTuition Fee: " <<tuifee[3];
+									cout<<"\nDown Payment: " <<downpayment[3];
+									cout<<"\nBalance: " <<balance[3];
+									cout<<"\n[1]BACK[";
+									cin>>stdback;
+									system("cls");
+								}
+								else if(stdchoice == 5)
+								{
+									cout<<"Student name: " <<stds[4];
+									cout<<"\nYear Name :" <<yrname[4];
+									cout<<"\nNumber of Units Enrolled: " <<unitrate[4];
+									cout<<"\nTuition Fee: " <<tuifee[4];
+									cout<<"\nDown Payment: " <<downpayment[4];
+									cout<<"\nBalance: " <<balance[4];
+									cout<<"\n[1]BACK[";
+									cin>>stdback;
+									system("cls");
+								}
+								
+								}
+								while(stdback != 1);
+							
+						}
+						else if(adminchoice == 2)
+						{	
+							cout<<"Deletion\n\n";
+							cout<<"Student1[1]";
+							cout<<"\nStudent2[2]";
+							cout<<"\nStudent3[3]";
+							cout<<"\nStudent4[4]";
+							cout<<"\nStudent5[5]\n";
+							cout<<"Back[6]";
+							cout<<"\nChoice: ";
+							cin>>deloption;
+							system("cls");
+							
+							if(deloption == 1)
+							{
+								cout<<"Deleting Slot 1...\n\n";
+								stds[0] = "";
+								yrname[0] = "";
+								unitrate[0] = 0;
+								tuifee[0] = 0;
+								downpayment[0] = 0;
+								balance[0] = 0;
+								
+								system("pause");
+								system("cls");
+							}
+							else if(deloption == 2)
+							{
+								cout<<"Deleting Slot 2...\n\n";
+								stds[1] = "";
+								yrname[1] = "";
+								unitrate[1] = 0;
+								tuifee[1] = 0;
+								downpayment[1] = 0;
+								balance[1] = 0;
+								
+								system("pause");
+								system("cls");
+							}
+							else if(deloption == 3)
+							{
+								cout<<"Deleting Slot 3...\n\n";
+								stds[2] = "";
+								yrname[2] = "";
+								unitrate[2] = 0;
+								tuifee[2] = 0;
+								downpayment[2] = 0;
+								balance[2] = 0;
+								
+								system("pause");
+								system("cls");
+							}
+							else if(deloption == 2)
+							{
+								cout<<"Deleting Slot 2...\n\n";
+								stds[1] = "";
+								yrname[1] = "";
+								unitrate[1] = 0;
+								tuifee[1] = 0;
+								downpayment[1] = 0;
+								balance[1] = 0;
+								
+								system("pause");
+								system("cls");
+							}
+							else if(deloption == 3)
+							{
+								cout<<"Deleting Slot 3...\n\n";
+								stds[2] = "";
+								yrname[2] = "";
+								unitrate[2] = 0;
+								tuifee[2] = 0;
+								downpayment[2] = 0;
+								balance[2] = 0;
+								
+								system("pause");
+								system("cls");
+							}
+							else if(deloption == 4)
+							{
+								cout<<"Deleting Slot ...\n\n";
+								stds[3] = "";
+								yrname[3] = "";
+								unitrate[3] = 0;
+								tuifee[3] = 0;
+								downpayment[3] = 0;
+								balance[3] = 0;
+								
+								system("pause");
+								system("cls");
+							}
+							else if(deloption == 5)
+							{
+								cout<<"Deleting Slot 5...\n\n";
+								stds[4] = "";
+								yrname[4] = "";
+								unitrate[4] = 0;
+								tuifee[4] = 0;
+								downpayment[4] = 0;
+								balance[4] = 0;
+								
+								system("pause");
+								system("cls");
+							}
+							
+						}
+						else if(adminchoice == 3)
+						{
+							cout<<"Information Control\n\n";
+							cout<<"[1]Admin";
+							cout<<"\n[2]Registrar";
+							cout<<"\n[3]Back";
+							cout<<"\nChoice: ";
+							cin>>ctrlchoice;
+							system("cls");
+								if(ctrlchoice == 1)
+								{
+									cout<<"Admin Change\n";
+									cout<<"Change User: ";
+									cin>>userr;
+									user[0] = userr;
+									cout<<"Change Password: ";
+									cin>>passs;
+									pass[0] = passs;
+									system("cls");
+									
+									cout<<"Information Changed!\n\n";
+									system("pause");
+									system("cls");
+								}
+								else if(ctrlchoice == 2)
+								{
+									cout<<"Registrar Change\n";
+									cout<<"Change User: ";
+									cin>>reuser;
+									user[1] = reuser;
+									cout<<"Change Password: ";
+									cin>>repass;
+									pass[1] = repass;
+									system("cls");
+								}
+						}
+					
+					}
+						while(adminchoice != 4);
+					}
+					else if(username == user[i2] && password == pass[i2])
+					{
+					
+						login = false;
+						do
+						{
+						cout<<"Hello, " << user[1];
+						cout<<"\n\n[1]Enroll\n";
+						cout<<"[2]View Information\n";
+						cout<<"[3]Print\n";
+						cout<<"[4]Logout";
+						cout<<"\nChoice: ";
+						cin>>regischoice;
+						system("cls");
+							if(regischoice == 1)
+							{
+								
+							}
+							else if(regischoice == 2)
+							{
+								cout<<"bruh";
+							}
+						}
+						while(regischoice!= 4);
+						{
+							login = false;
+						system("pause");
+						system("cls");
+						}
+					}
+			}
+			else if (menuchoice >2)
+			{
+				cout<<"Invalid Choice\n\n";
+				system("pause");
+				system("cls");
+			}
+	}
+	while(menuchoice != 2);
+	{
+		cout<<"Goodbye";
+	}
+}
